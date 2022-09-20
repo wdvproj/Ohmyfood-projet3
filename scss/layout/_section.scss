@@ -1,0 +1,10 @@
+.presentation { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include media(desktop) {
+        flex-direction: row;
+        align-items: flex-end;
+        background: linear-gradient(180deg, $primary-dark-background 1px, $secondary-dark-background 5px, darken($background, 6%));
+    }
+}

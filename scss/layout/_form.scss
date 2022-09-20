@@ -1,0 +1,47 @@
+.searching-part {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+    &__location {
+        background: linear-gradient(180deg, $primary-dark-background 1px, $secondary-dark-background 5px, darken($background, 6%));
+        text-align: center;
+        @include media(desktop) {
+            position: relative;
+            left: 50%;
+            background: none;
+            font-size: $title-size - 4px;
+        }
+        .location__location-icon-contenair {
+            @include location-layout;
+        }
+
+        .location__text {
+            @include location-layout;
+        }
+    }
+
+    &__introduction {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 8%;
+        background: $background;
+        text-align: center;
+        @include media(desktop) {
+            height: 307px;
+            padding-top: 2%;
+        }
+        .introduction__title {
+            width: 62%;
+            margin: 2%;
+            font-size: $title-size;
+        }
+
+        .introduction__text {
+            width: 81%;
+            margin: 2%;
+            font-weight: 100;
+            font-size: $title-size - 4px;
+        }
+    }
+}
