@@ -1,0 +1,17 @@
+.top__link {
+    position: absolute;
+    left: 5%;
+    width: auto;
+}
+
+.secondary-cards {
+    &__image-contenair {
+        @include media(desktop) {
+            padding: 0px 200px;
+        }
+    }
+
+    &__image {
+        object-fit: cover;
+    }
+}
