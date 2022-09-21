@@ -2,18 +2,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 58%;
+    width: fit-content;
     height: 50px;
     margin: 5%;
-    padding: 5%;
+    padding: 3%;
     background: linear-gradient(180deg, nth($color, 3), nth($color, 2));
     box-shadow: 2px 2px 5px 2px $secondary-dark-background;
     border: none;
     border-radius: $corner-shape;
     color: white;
-    &--hover:hover { 
+    white-space: nowrap;
+    &:hover { 
         opacity: 0.75;
         box-shadow: 2px 2px 5px 2px darken($secondary-dark-background, 10%);
     }
-
 }
