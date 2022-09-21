@@ -4,12 +4,11 @@
     align-items: center;
     margin: 3% 0%;
     padding-top: 2%;
-    &__image-contenair {
+    &__image {
         width: auto;
         padding-top: 2%;
-    }
-
-    &__image {
-        object-fit: cover;
+        img {
+            object-fit: cover;
+        }
     }
 }
