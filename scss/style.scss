@@ -1,4 +1,4 @@
-// BASE
+/* BASE */
 
 @import "./base/base";
 
@@ -8,7 +8,7 @@
 
 @import "./utils/mixins";
 
-// LAYOUT 
+/* LAYOUT */ 
 
 @import "./layout/header";
 
@@ -18,10 +18,10 @@
 
 @import "./layout/list";
 
-// COMPONENTS
+/* COMPONENTS */
 
 @import "./components/button"; 
 
-// PAGES
+/* PAGES */
 
 @import "./pages/menu";
