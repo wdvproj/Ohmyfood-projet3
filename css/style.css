@@ -1,3 +1,4 @@
+/* BASE */
 * {
   box-sizing: border-box;
   width: 100%;
@@ -28,6 +29,7 @@ ol, ul {
   list-style-type: none;
 }
 
+/* LAYOUT */
 .top {
   display: flex;
   justify-content: center;
@@ -35,11 +37,11 @@ ol, ul {
   margin: 3% 0%;
   padding-top: 2%;
 }
-.top__image-contenair {
+.top__image {
   width: auto;
   padding-top: 2%;
 }
-.top__image {
+.top__image img {
   object-fit: cover;
 }
 
@@ -61,24 +63,19 @@ ol, ul {
   flex-direction: column;
   align-items: center;
 }
-.searching-part__location {
+.searching-part__result {
   background: linear-gradient(180deg, #bebebe 1px, #d5d5d5 5px, #e5e5e5);
   text-align: center;
 }
 @media screen and (min-width: 992px) {
-  .searching-part__location {
+  .searching-part__result {
     position: relative;
     left: 50%;
     background: none;
     font-size: 18px;
   }
 }
-.searching-part__location .location__location-icon-contenair {
-  display: inline-block;
-  width: auto;
-  margin: 3% 1%;
-}
-.searching-part__location .location__text {
+.searching-part__result i, .searching-part__result p {
   display: inline-block;
   width: auto;
   margin: 3% 1%;
@@ -97,12 +94,12 @@ ol, ul {
     padding-top: 2%;
   }
 }
-.searching-part__introduction .introduction__title {
+.searching-part__introduction h1 {
   width: 62%;
   margin: 2%;
   font-size: 22px;
 }
-.searching-part__introduction .introduction__text {
+.searching-part__introduction p {
   width: 81%;
   margin: 2%;
   font-weight: 100;
@@ -139,30 +136,30 @@ ol, ul {
     background-color: white;
   }
 }
-.legend__list .list__title {
+.legend__list li {
   height: 80px;
-  margin: 5% 1%;
+  margin: 25px 0px;
   background-color: #F4F4F4;
   border-radius: 30px;
   box-shadow: 1px 1px 13px 5px #d5d5d5;
 }
 @media screen and (min-width: 992px) {
-  .legend__list .list__title {
+  .legend__list li {
     width: 90%;
-    margin: 2% 0%;
+    margin: 13px 0px;
   }
 }
-.legend__list .list__title:active {
+.legend__list li:active {
   background-color: #f4eafe;
 }
-.legend__list .list__title:active .title__icon {
+.legend__list li:active i {
   color: #9356DC;
 }
-.legend__list .list__title .title__number {
+.legend__list em {
   display: inline-block;
   position: relative;
-  right: 2%;
-  top: 35%;
+  right: 12px;
+  top: 30px;
   width: 25px;
   height: 25px;
   padding-top: 4px;
@@ -171,37 +168,55 @@ ol, ul {
   text-align: center;
   color: white;
 }
-.legend__list .list__title .title__icon {
+@media screen and (min-width: 992px) {
+  .legend__list em {
+    top: 27px;
+  }
+}
+.legend__list i {
   position: relative;
-  left: 10%;
-  top: 8%;
+  left: 7%;
+  top: 10px;
   color: #5b5b5b;
 }
-.legend__list .list__title .title__text {
+@media screen and (min-width: 992px) {
+  .legend__list i {
+    top: 6px;
+  }
+}
+.legend__list span {
   position: relative;
-  left: 18%;
-  bottom: 15%;
+  left: 15%;
+  bottom: 8px;
+}
+@media screen and (min-width: 992px) {
+  .legend__list span {
+    bottom: 13px;
+  }
 }
 
+/* COMPONENTS */
 .interactive-button {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 58%;
+  width: fit-content;
   height: 50px;
   margin: 5%;
-  padding: 5%;
+  padding: 3%;
   background: linear-gradient(180deg, #FF79DA, #9356DC);
   box-shadow: 2px 2px 5px 2px #d5d5d5;
   border: none;
   border-radius: 40px;
   color: white;
+  white-space: nowrap;
 }
-.interactive-button--hover:hover {
+.interactive-button:hover {
   opacity: 0.75;
   box-shadow: 2px 2px 5px 2px #bcbcbc;
 }
 
+/* PAGES */
 .top__link {
   position: absolute;
   left: 5%;
@@ -209,11 +224,11 @@ ol, ul {
 }
 
 @media screen and (min-width: 992px) {
-  .secondary-cards__image-contenair {
+  .secondary-cards__image {
     padding: 0px 200px;
   }
 }
-.secondary-cards__image {
+.secondary-cards__image img {
   object-fit: cover;
 }
 
