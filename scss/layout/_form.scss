@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;  
-    &__location {
+    &__result {
         background: linear-gradient(180deg, $primary-dark-background 1px, $secondary-dark-background 5px, darken($background, 6%));
         text-align: center;
         @include media(desktop) {
@@ -11,15 +11,10 @@
             background: none;
             font-size: $title-size - 4px;
         }
-        .location__location-icon-contenair {
-            @include location-layout;
-        }
-
-        .location__text {
+        i, p {
             @include location-layout;
         }
     }
-
     &__introduction {
         display: flex;
         flex-direction: column;
@@ -31,13 +26,13 @@
             height: 307px;
             padding-top: 2%;
         }
-        .introduction__title {
+        h1 {
             width: 62%;
             margin: 2%;
             font-size: $title-size;
         }
 
-        .introduction__text {
+        p {
             width: 81%;
             margin: 2%;
             font-weight: 100;
