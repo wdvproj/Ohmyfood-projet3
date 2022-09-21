@@ -5,13 +5,12 @@
 }
 
 .secondary-cards {
-    &__image-contenair {
+    &__image {
         @include media(desktop) {
             padding: 0px 200px;
         }
-    }
-
-    &__image {
-        object-fit: cover;
+        img {
+            object-fit: cover;
+        }
     }
 }
