@@ -1,0 +1,52 @@
+.primary-cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    background-color: $background;
+    &__title {
+        font-size: $title-size;
+    }
+
+    &__card {
+        margin-bottom: 30px;
+        border-radius: 20px;
+        background-color: white;
+        box-shadow: 2px 2px 8px 2px $third-dark-background;
+    }    
+
+    &__image {
+        position: relative;
+        height: 70%;
+        img {
+            object-fit: cover;
+            height: 350px;
+            border-radius: 20px 20px 0px 0px;
+        }
+
+        &--content::after {
+            content: "Nouveau";
+            position: absolute;
+            top: 5%;
+            left: 70%;
+            z-index: 1;
+            padding: 1% 2%;
+            background-color: nth($color, 4);
+            color: $text-new;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        padding-top: 20px;
+        h3 {
+            margin: 0px 0px 0px 15px;
+        }
+
+        p {
+            margin: 5px 0px 20px 15px;
+        }
+    }
+}
