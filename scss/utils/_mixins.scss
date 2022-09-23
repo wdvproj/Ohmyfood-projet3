@@ -1,11 +1,11 @@
-@mixin location-layout {
+@mixin inline-layout {
     display: inline-block;
-    width: auto;
     margin: 3% 1%;
 }
 
 @mixin list-bloc {
-    border-radius: $corner-shape - 10px;
+    margin: 25px 0px;
+    border-radius: $corner-shape - 15px;
     box-shadow: 1px 1px 13px 5px $secondary-dark-background;
 }
 
