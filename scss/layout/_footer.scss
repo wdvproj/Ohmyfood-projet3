@@ -1,0 +1,29 @@
+.bottom {
+    padding: 2% 0% 0% 6%;
+    background-color: #282828;
+    &__title {
+        font-size: $title-size - 6px;
+        font-family: "Shrikhand", cursive;
+        color: white;
+    }
+
+    &__information {
+        margin-bottom: 6%;
+        li {
+            line-height: 1.5;
+        }
+
+        a {
+            display: flex;
+            color: white;
+        }
+
+        span {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: fit-content;
+            margin-right: 10px;
+        }
+    }
+}
