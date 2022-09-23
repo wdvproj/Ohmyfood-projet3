@@ -29,6 +29,11 @@ ol, ul {
   list-style-type: none;
 }
 
+i, p {
+  width: fit-content;
+  height: fit-content;
+}
+
 /* LAYOUT */
 .top {
   display: flex;
@@ -38,7 +43,7 @@ ol, ul {
   padding-top: 2%;
 }
 .top__image {
-  width: auto;
+  width: fit-content;
   padding-top: 2%;
 }
 .top__image img {
@@ -77,7 +82,6 @@ ol, ul {
 }
 .searching-part__result i, .searching-part__result p {
   display: inline-block;
-  width: auto;
   margin: 3% 1%;
 }
 .searching-part__introduction {
@@ -138,9 +142,9 @@ ol, ul {
 }
 .legend__list li {
   height: 80px;
-  margin: 25px 0px;
   background-color: #F4F4F4;
-  border-radius: 30px;
+  margin: 25px 0px;
+  border-radius: 25px;
   box-shadow: 1px 1px 13px 5px #d5d5d5;
 }
 @media screen and (min-width: 992px) {
@@ -175,23 +179,23 @@ ol, ul {
 }
 .legend__list i {
   position: relative;
-  left: 7%;
-  top: 10px;
+  left: 4%;
+  top: 30px;
   color: #5b5b5b;
 }
 @media screen and (min-width: 992px) {
   .legend__list i {
-    top: 6px;
+    top: 28px;
   }
 }
 .legend__list span {
   position: relative;
-  left: 15%;
-  bottom: 8px;
+  left: 10%;
+  top: 30px;
 }
 @media screen and (min-width: 992px) {
   .legend__list span {
-    bottom: 13px;
+    top: 28px;
   }
 }
 
@@ -242,6 +246,11 @@ ol, ul {
 .primary-cards__content p {
   margin: 5px 0px 20px 15px;
 }
+.primary-cards i {
+  position: relative;
+  left: 20%;
+  bottom: 100px;
+}
 
 /* COMPONENTS */
 .interactive-button {
@@ -263,20 +272,19 @@ ol, ul {
   opacity: 0.75;
   box-shadow: 2px 2px 5px 2px #bcbcbc;
 }
-
-.saving-item {
-  position: relative;
-  left: 65%;
-  bottom: 100px;
+.interactive-button--padding {
+  padding: 5px 50px;
 }
 
 /* PAGES */
 .top__link {
   position: absolute;
   left: 5%;
-  width: auto;
 }
 
+.secondary-cards {
+  background-color: #F4F4F4;
+}
 @media screen and (min-width: 992px) {
   .secondary-cards__image {
     padding: 0px 200px;
@@ -284,6 +292,55 @@ ol, ul {
 }
 .secondary-cards__image img {
   object-fit: cover;
+  height: 550px;
+}
+.secondary-cards__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  bottom: 60px;
+  padding: 0% 5%;
+  border-radius: 50px 50px 0px 0px;
+  background-color: #F4F4F4;
+}
+.secondary-cards__title {
+  display: flex;
+  padding-top: 8%;
+  font-family: "Shrikhand", cursive;
+}
+.secondary-cards__title h1 {
+  margin-top: 0px;
+}
+.secondary-cards__card {
+  margin: 2% 0%;
+}
+.secondary-cards__card h2 {
+  font-weight: 100;
+  font-size: 16px;
+}
+.secondary-cards__card span {
+  border-bottom: medium solid #99E2D0;
+}
+.secondary-cards__card li {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  margin: 25px 0px;
+  border-radius: 25px;
+  box-shadow: 1px 1px 13px 5px #d5d5d5;
+  background-color: white;
+}
+.secondary-cards__card h3 {
+  margin: 0px 0px 10px 0px;
+}
+.secondary-cards__card div > p {
+  margin: 0px;
+}
+.secondary-cards__card p {
+  align-self: flex-end;
+  margin: 0px 15px 0px 0px;
 }
 
 /*# sourceMappingURL=style.css.map */
