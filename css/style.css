@@ -20,7 +20,7 @@ a:hover {
   cursor: default;
 }
 
-em {
+em, address {
   font-style: normal;
 }
 
@@ -252,6 +252,33 @@ i, p {
   bottom: 100px;
 }
 
+.bottom {
+  padding: 2% 0% 0% 6%;
+  background-color: #282828;
+}
+.bottom__title {
+  font-size: 16px;
+  font-family: "Shrikhand", cursive;
+  color: white;
+}
+.bottom__information {
+  margin-bottom: 6%;
+}
+.bottom__information li {
+  line-height: 1.5;
+}
+.bottom__information a {
+  display: flex;
+  color: white;
+}
+.bottom__information span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  margin-right: 10px;
+}
+
 /* COMPONENTS */
 .interactive-button {
   display: flex;
@@ -280,6 +307,7 @@ i, p {
 .top__link {
   position: absolute;
   left: 5%;
+  width: fit-content;
 }
 
 .secondary-cards {
