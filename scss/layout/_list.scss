@@ -10,6 +10,7 @@
             opacity: 0;
         }   
     }
+
     &__list {
         padding-top: 1px;
         @include media(desktop) {
@@ -22,7 +23,6 @@
         }   
         li {
             height: 80px;
-            margin: 25px 0px;
             background-color: $background;
             @include list-bloc;
             @include media(desktop) {
@@ -56,20 +56,20 @@
 
         i {
             position: relative;
-            left: 7%;
-            top: 10px;
+            left: 4%;
+            top: 30px;
             color: darken($background, 60%);
             @include media(desktop) {
-                top: 6px;
+                top: 28px;
             }
         }
 
         span {
             position: relative;
-            left: 15%;
-            bottom: 8px;
+            left: 10%;
+            top: 30px;
             @include media(desktop) {
-                bottom: 13px;
+                top: 28px;
             }
         }
     }
