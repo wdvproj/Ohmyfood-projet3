@@ -12,9 +12,10 @@
             font-size: $title-size - 4px;
         }
         i, p {
-            @include location-layout;
+            @include inline-layout;
         }
     }
+    
     &__introduction {
         display: flex;
         flex-direction: column;
