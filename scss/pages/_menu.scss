@@ -1,16 +1,72 @@
 .top__link {
     position: absolute;
     left: 5%;
-    width: auto;
 }
 
 .secondary-cards {
+    background-color: $background;
     &__image {
         @include media(desktop) {
             padding: 0px 200px;
         }
         img {
             object-fit: cover;
+            height: 550px;
         }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        bottom: 60px;
+        padding: 0% 5%;
+        border-radius: 50px 50px 0px 0px;
+        background-color: $background;
+    }
+
+    &__title {
+        display: flex;
+        padding-top: 8%;
+        font-family: "Shrikhand", cursive;
+        h1 {
+            margin-top: 0px;
+        }
+    }
+
+    &__card {
+        margin: 2% 0%;
+        h2 {
+            font-weight: 100;
+            font-size: $title-size - 6px;
+        }
+
+        span {
+            border-bottom: medium solid nth($color, 4);
+        }
+
+        li {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px;
+            @include list-bloc;
+            background-color: white;
+        }
+
+        h3 {
+            margin: 0px 0px 10px 0px;
+        }
+
+        div > p {
+            margin: 0px;
+        }
+
+        p {
+            align-self: flex-end;
+            margin: 0px 15px 0px 0px;
+        }
+
     }
 }
