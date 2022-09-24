@@ -310,20 +310,52 @@ i, p {
   padding: 2% 0% 0% 6%;
   background-color: #282828;
 }
+@media screen and (min-width: 768px) {
+  .bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0%;
+  }
+}
 .bottom__title {
   font-size: 16px;
   font-family: "Shrikhand", cursive;
   color: white;
 }
+@media screen and (min-width: 768px) {
+  .bottom__title {
+    width: fit-content;
+    font-size: 18px;
+  }
+}
 .bottom__information {
   margin-bottom: 6%;
+}
+@media screen and (min-width: 768px) {
+  .bottom__information {
+    display: flex;
+    justify-content: space-evenly;
+  }
 }
 .bottom__information li {
   line-height: 1.5;
 }
+@media screen and (min-width: 768px) {
+  .bottom__information li {
+    width: fit-content;
+    font-size: 18px;
+  }
+}
 .bottom__information a {
   display: flex;
   color: white;
+}
+@media screen and (min-width: 768px) {
+  .bottom__information a {
+    white-space: nowrap;
+  }
 }
 .bottom__information span {
   display: flex;
