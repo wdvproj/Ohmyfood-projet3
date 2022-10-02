@@ -145,7 +145,7 @@ i, p {
   background-color: #F4F4F4;
   margin: 25px 0px;
   border-radius: 25px;
-  box-shadow: 1px 1px 13px 5px #d5d5d5;
+  box-shadow: 1px 1px 10px 1px #d5d5d5;
 }
 @media screen and (min-width: 992px) {
   .legend__list li {
@@ -174,7 +174,7 @@ i, p {
 }
 @media screen and (min-width: 992px) {
   .legend__list em {
-    top: 27px;
+    top: 25px;
   }
 }
 .legend__list i {
@@ -185,7 +185,7 @@ i, p {
 }
 @media screen and (min-width: 992px) {
   .legend__list i {
-    top: 28px;
+    top: 25px;
   }
 }
 .legend__list span {
@@ -195,7 +195,7 @@ i, p {
 }
 @media screen and (min-width: 992px) {
   .legend__list span {
-    top: 28px;
+    top: 25px;
   }
 }
 
@@ -210,6 +210,22 @@ i, p {
 @media screen and (min-width: 768px) {
   .primary-cards {
     background-color: white;
+  }
+  .primary-cards__saving-item-1 {
+    left: 39%;
+    top: 375px;
+  }
+  .primary-cards__saving-item-2 {
+    left: 85%;
+    top: 375px;
+  }
+  .primary-cards__saving-item-3 {
+    left: 39%;
+    top: 845px;
+  }
+  .primary-cards__saving-item-4 {
+    left: 85%;
+    top: 845px;
   }
 }
 .primary-cards__title {
@@ -232,7 +248,6 @@ i, p {
 @media screen and (min-width: 768px) {
   .primary-cards__contenair {
     flex-flow: row wrap;
-    position: relative;
   }
 }
 .primary-cards__card {
@@ -279,30 +294,25 @@ i, p {
 .primary-cards__content p {
   margin: 5px 0px 20px 15px;
 }
-.primary-cards i {
-  position: relative;
-  left: 20%;
+.primary-cards__saving-item {
+  left: 28%;
   bottom: 100px;
 }
 @media screen and (min-width: 768px) {
+  .primary-cards__saving-item {
+    display: none;
+  }
+}
+.primary-cards__saving-item::after {
+  position: absolute;
+}
+.primary-cards i {
+  display: none;
+}
+@media screen and (min-width: 768px) {
   .primary-cards i {
+    display: inline-block;
     position: absolute;
-  }
-  .primary-cards i.primary-cards__saving-item-1 {
-    left: 35%;
-    top: 375px;
-  }
-  .primary-cards i.primary-cards__saving-item-2 {
-    left: 81%;
-    top: 375px;
-  }
-  .primary-cards i.primary-cards__saving-item-3 {
-    left: 35%;
-    top: 845px;
-  }
-  .primary-cards i.primary-cards__saving-item-4 {
-    left: 81%;
-    top: 845px;
   }
 }
 
@@ -389,6 +399,49 @@ i, p {
   padding: 5px 50px;
 }
 
+.saving-item {
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+}
+.saving-item svg {
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  z-index: 2;
+}
+.saving-item:active svg {
+  z-index: 1;
+}
+.saving-item::after {
+  content: "";
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  background-image: linear-gradient(0deg, #e66465, #9198e5);
+  clip-path: path("M 10 10 A 5 5 0 0 1 20 10 A 5 5 0 0 1 30 10 Q 32 16 20 25 Q 10 18 10 10 Z");
+  opacity: 0;
+  z-index: 1;
+}
+.saving-item:active::after {
+  z-index: 2;
+  animation: fill 0.5s forwards;
+}
+
+@keyframes fill {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.4;
+  }
+  75% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 /* PAGES */
 .top__link {
   position: absolute;
@@ -455,6 +508,15 @@ i, p {
   flex-direction: column;
   justify-content: center;
 }
+.secondary-cards__contenair article:nth-child(1) {
+  animation: display 0.5s 0.5s ease-out both;
+}
+.secondary-cards__contenair article:nth-child(2) {
+  animation: display 0.5s 1s ease-out both;
+}
+.secondary-cards__contenair article:nth-child(3) {
+  animation: display 0.5s 1.5s ease-out both;
+}
 @media screen and (min-width: 768px) {
   .secondary-cards__contenair {
     flex-direction: row;
@@ -495,10 +557,12 @@ i, p {
 .secondary-cards__card li {
   display: flex;
   justify-content: space-between;
+  position: relative;
   padding: 15px;
+  overflow: hidden;
   margin: 25px 0px;
   border-radius: 25px;
-  box-shadow: 1px 1px 13px 5px #d5d5d5;
+  box-shadow: 1px 1px 10px 1px #d5d5d5;
   background-color: white;
 }
 @media screen and (min-width: 768px) {
@@ -512,6 +576,17 @@ i, p {
   .secondary-cards__card li {
     background-color: #F4F4F4;
   }
+}
+.secondary-cards__card li::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  left: 83%;
+  top: 0%;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: #99E2D0;
 }
 @media screen and (min-width: 768px) {
   .secondary-cards__card div {
@@ -542,6 +617,25 @@ i, p {
 @media screen and (min-width: 768px) {
   .secondary-cards__card p {
     align-self: center;
+  }
+}
+.secondary-cards__card i {
+  position: absolute;
+  left: 90%;
+  top: 40%;
+  z-index: 2;
+  color: white;
+}
+
+@keyframes display {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
