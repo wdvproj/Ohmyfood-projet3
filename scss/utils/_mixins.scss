@@ -6,7 +6,7 @@
 @mixin list-bloc {
     margin: 25px 0px;
     border-radius: $corner-shape - 15px;
-    box-shadow: 1px 1px 13px 5px $secondary-dark-background;
+    box-shadow: 1px 1px 10px 1px $secondary-dark-background;
 }
 
 @mixin media($type) {
