@@ -7,6 +7,32 @@
     background-color: $background;
     @include media(tablet) {
         background-color: white;   
+        @for $i from 1 through 4 {
+            &__saving-item-#{$i} {
+        
+                @if ($i%2 != 0) {
+                    left: 39%;
+
+                    @if ($i == 1) {
+                        top: 440px - 65px;
+                    }
+                    @else {
+                        top: (2 * 440px) + 30px - 65px;
+                    }
+                }
+                @else {
+                    left: 85%;
+
+                    @if ($i == 2) {
+                        top: 440px - 65px;
+                    }
+                    @else {
+                        top: (2 * 440px) + 30px - 65px;
+                    }
+                }
+
+            } 
+        }
     }
 
     &__title {
@@ -25,8 +51,7 @@
         align-items: center;
         position: relative;
         @include media(tablet) {
-            flex-flow: row wrap;
-            position: relative;   
+            flex-flow: row wrap;   
         }
     }
 
@@ -77,39 +102,22 @@
         }
     }
 
-    i {
-        position: relative;
-        left: 20%;
+    &__saving-item {
+        left: 28%;
         bottom: 100px;
         @include media (tablet) {
+            display: none;
+        }
+        &::after {
             position: absolute;
-
-            @for $i from 1 through 4 {
-                &.primary-cards__saving-item-#{$i} {
-            
-                    @if ($i%2 != 0) {
-                        left: 35%;
-    
-                        @if ($i == 1) {
-                            top: 440px - 65px;
-                        }
-                        @else {
-                            top: (2 * 440px) + 30px - 65px;
-                        }
-                    }
-                    @else {
-                        left: 81%;
-    
-                        @if ($i == 2) {
-                            top: 440px - 65px;
-                        }
-                        @else {
-                            top: (2 * 440px) + 30px - 65px;
-                        }
-                    }
-    
-                } 
-            }
         }
     }
-}
+
+    i {
+        display: none;
+        @include media (tablet) {
+            display: inline-block;
+            position: absolute;
+        }
+    }   
+}     
