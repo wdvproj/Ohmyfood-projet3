@@ -50,7 +50,7 @@
             text-align: center;
             color: white;
             @include media(desktop) {
-                top: 27px;
+                top: 25px;
             }          
         }
 
@@ -60,7 +60,7 @@
             top: 30px;
             color: darken($background, 60%);
             @include media(desktop) {
-                top: 28px;
+                top: 25px;
             }
         }
 
@@ -69,7 +69,7 @@
             left: 10%;
             top: 30px;
             @include media(desktop) {
-                top: 28px;
+                top: 25px;
             }
         }
     }
