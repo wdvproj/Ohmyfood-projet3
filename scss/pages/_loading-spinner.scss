@@ -1,0 +1,221 @@
+.index {
+    animation: index 0s 3s both;
+}
+
+@for $i from 1 through 2 {
+    .loading-spinner-#{$i} {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        height: 100vh;
+        transform: scale(0);
+        animation: pause 3s;
+        @if $i == 1 {
+            z-index: 1;
+            background-color: $background;
+            &::before {
+                content: "ohmyfood";
+                display: inline-block;
+                position: relative;
+                left: 0px;
+                top: 0px;
+                z-index: 4;
+                font-family: "Shrikhand", cursive;
+                color: black;
+                opacity: 0;
+                animation: down 0.7s ease-out forwards;
+            }
+    
+            &::after {
+                content: "";
+                display: inline-block;
+                position: relative;
+                left: 0px;
+                top: 300px;
+                z-index: 3;
+                box-sizing: content-box;
+                width: 125px;
+                height: 125px;
+                border-radius: 125px;
+                background-color: nth($color, 4);
+                opacity: 0;
+                animation: show 1s 0.7s ease-out forwards;
+            }
+        }
+        @else {
+            z-index: 2;
+            background-color: transparent;
+            &::before {
+                content: "";
+                display: inline-block;
+                position: relative;
+                left: 0px;
+                top: 316px;
+                z-index: 1;
+                box-sizing: content-box;
+                width: 125px;
+                height: 125px;
+                border: 2px solid $background;
+                border-top: 2px solid nth($color, 3);
+                border-radius: 135px;
+                transform-origin: center;
+                transform: rotate(0deg);
+                opacity: 0;
+                animation: load 0.5s 2s ease-in-out forwards infinite;
+            }
+    
+            &::after {
+                content: "";
+                display: inline-block;
+                position: relative;
+                left: 0px;
+                top: 187px;
+                z-index: 2;
+                width: 125px;
+                height: 125px;
+                border: 2px solid $background;
+                border-top: 2px solid nth($color, 2);
+                border-radius: 135px;
+                transform-origin: center;
+                transform: rotate(0deg);
+                opacity: 0;
+                animation: spin 0.5s 2s ease-in-out forwards infinite;
+            }  
+        }
+    }
+}
+    
+@keyframes index {
+    from {
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes pause {
+    from {
+        transform: scale(1);
+    }
+    
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes down {
+    0% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+
+    25% {
+        opacity: 1;
+        transform: translateY(370px);
+    }
+
+    50% {
+        opacity: 1;
+        transform: translateY(360px);
+    }
+
+    60% {
+        opacity: 1;
+        transform: translateY(370px);
+    }
+
+    80% {
+        opacity: 1;
+        transform: translateY(365px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(370px);
+    }           
+}
+
+@keyframes show {
+    0% {
+        opacity: 0;
+    }
+
+    25% {
+        opacity: 0.2;
+    }
+
+    75% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes load {
+    0% {
+        opacity: 1;
+        transform: rotate(0deg);
+    }
+
+    25% {
+        opacity: 1;
+        transform: rotate(-45deg);
+    }
+
+    50% {
+        opacity: 1;
+        transform: rotate(-90deg);
+    }
+
+    75% {
+        opacity: 1;
+        transform: rotate(-135deg);
+    }
+
+    90% {
+        opacity: 1;
+        transform: rotate(-180deg);
+    }
+
+    100% {
+        opacity: 1;
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        opacity: 0;
+        transform: rotate(0deg);
+    }
+
+    25% {
+        opacity: 0;
+        transform: rotate(-45deg);
+    }
+
+    50% {
+        opacity: 0;
+        transform: rotate(-90deg);
+    }
+
+    75% {
+        opacity: 0.5;
+        transform: rotate(-135deg);
+    }
+
+    90% {
+        opacity: 0.8;
+        transform: rotate(-180deg);
+    }
+
+    100% {
+        opacity: 1;
+        transform: rotate(-360deg);
+    }
+}
