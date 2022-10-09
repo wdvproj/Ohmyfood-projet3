@@ -8,6 +8,12 @@
 
 @import "./utils/mixins";
 
+/* COMPONENTS */
+
+@import "./components/button"; 
+
+@import "./components/saving-item";
+
 /* LAYOUT */ 
 
 @import "./layout/header";
@@ -21,12 +27,6 @@
 @import "./layout/primary-cards";
 
 @import "./layout/footer";
-
-/* COMPONENTS */
-
-@import "./components/button"; 
-
-@import "./components/saving-item";
 
 /* PAGES */
 
