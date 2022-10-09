@@ -6,35 +6,8 @@
     padding: 40px 20px;
     background-color: $background;
     @include media(tablet) {
-        background-color: white;   
-        @for $i from 1 through 4 {
-            &__saving-item-#{$i} {
-        
-                @if ($i%2 != 0) {
-                    left: 39%;
-
-                    @if ($i == 1) {
-                        top: 440px - 65px;
-                    }
-                    @else {
-                        top: (2 * 440px) + 30px - 65px;
-                    }
-                }
-                @else {
-                    left: 85%;
-
-                    @if ($i == 2) {
-                        top: 440px - 65px;
-                    }
-                    @else {
-                        top: (2 * 440px) + 30px - 65px;
-                    }
-                }
-
-            } 
-        }
-    }
-
+        background-color: white; 
+    }  
     &__title {
         font-size: $title-size;
         @include media(tablet) {
@@ -51,7 +24,7 @@
         align-items: center;
         position: relative;
         @include media(tablet) {
-            flex-flow: row wrap;   
+            flex-flow: row wrap;
         }
     }
 
@@ -67,7 +40,7 @@
             background-color: $background;
         }
     }    
-
+        
     &__image {
         position: relative;
         height: 70%;
@@ -106,18 +79,39 @@
         left: 28%;
         bottom: 100px;
         @include media (tablet) {
-            display: none;
+            position: absolute;
+            bottom: 0px;
+            @for $i from 1 through 4 {
+                &-#{$i} {
+            
+                    @if ($i%2 != 0) {
+                        left: 39%;
+    
+                        @if ($i == 1) {
+                            top: 440px - 65px;
+                        }
+                        @else {
+                            top: (2 * 440px) + 30px - 65px;
+                        }
+                    }
+                    @else {
+                        left: 85%;
+    
+                        @if ($i == 2) {
+                            top: 440px - 65px;
+                        }
+                        @else {
+                            top: (2 * 440px) + 30px - 65px;
+                        }
+                    }
+    
+                } 
+            }
         }
+        
         &::after {
             position: absolute;
         }
-    }
-
-    i {
-        display: none;
-        @include media (tablet) {
-            display: inline-block;
-            position: absolute;
-        }
-    }   
-}     
+    }      
+}   
+ 
