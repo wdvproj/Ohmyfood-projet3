@@ -24,7 +24,7 @@
         li {
             height: 80px;
             background-color: $background;
-            @include list-bloc;
+            @include list-block;
             @include media(desktop) {
                 width: 90%;
                 margin: 13px 0px;
