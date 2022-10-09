@@ -3,7 +3,7 @@
     margin: 3% 1%;
 }
 
-@mixin list-bloc {
+@mixin list-block {
     margin: 25px 0px;
     border-radius: $corner-shape - 15px;
     box-shadow: 1px 1px 10px 1px $secondary-dark-background;
