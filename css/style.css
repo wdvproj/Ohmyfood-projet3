@@ -63,28 +63,26 @@ i, p {
   width: fit-content;
   height: fit-content;
 }
-.saving-item svg {
-  position: absolute;
-  width: 35px;
-  height: 35px;
+.saving-item > div:nth-child(2n+1) {
+  position: relative;
   z-index: 2;
+  opacity: 1;
 }
-.saving-item:active svg {
-  z-index: 1;
-}
-.saving-item::after {
-  content: "";
-  display: inline-block;
-  width: 35px;
-  height: 35px;
-  background-image: linear-gradient(0deg, #e66465, #9198e5);
-  clip-path: path("M 10 10 A 5 5 0 0 1 20 10 A 5 5 0 0 1 30 10 Q 32 16 20 25 Q 10 18 10 10 Z");
+.saving-item > div:nth-child(2n+1):active {
   opacity: 0;
-  z-index: 1;
 }
-.saving-item:active::after {
-  z-index: 2;
-  animation: fill 0.5s forwards;
+.saving-item > div:nth-child(2n+1):active + div {
+  animation: fill 0.4s linear forwards;
+}
+.saving-item > div:nth-child(2n) {
+  position: absolute;
+  top: 0px;
+  z-index: 1;
+  background-image: linear-gradient(0deg, #e66465, #9198e5);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  opacity: 0;
 }
 
 @keyframes fill {
@@ -92,10 +90,11 @@ i, p {
     opacity: 0;
   }
   25% {
-    opacity: 0.4;
+    opacity: 0.2;
   }
   75% {
-    opacity: 0.8;
+    opacity: 0.5;
+    animation-timing-function: ease-out;
   }
   100% {
     opacity: 1;
@@ -279,158 +278,6 @@ i, p {
     background-color: white;
   }
 }
-.primary-cards__saving-item-1 {
-  display: none;
-}
-@media screen and (min-width: 768px) {
-  .primary-cards__saving-item-1 {
-    display: inline-block;
-    position: absolute;
-    width: fit-content;
-    height: fit-content;
-    left: 39%;
-    top: 375px;
-  }
-  .primary-cards__saving-item-1 i:nth-child(2n+1) {
-    position: relative;
-    z-index: 2;
-    opacity: 1;
-  }
-  .primary-cards__saving-item-1 i:nth-child(2n) {
-    position: relative;
-    right: 36px;
-    z-index: 1;
-    opacity: 0;
-  }
-  .primary-cards__saving-item-1:active {
-    background-image: linear-gradient(0deg, #e66465, #9198e5);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-  }
-  .primary-cards__saving-item-1:active i:nth-child(2n+1) {
-    z-index: 1;
-    opacity: 0;
-  }
-  .primary-cards__saving-item-1:active i:nth-child(2n) {
-    z-index: 2;
-    opacity: 1;
-  }
-}
-.primary-cards__saving-item-2 {
-  display: none;
-}
-@media screen and (min-width: 768px) {
-  .primary-cards__saving-item-2 {
-    display: inline-block;
-    position: absolute;
-    width: fit-content;
-    height: fit-content;
-    left: 85%;
-    top: 375px;
-  }
-  .primary-cards__saving-item-2 i:nth-child(2n+1) {
-    position: relative;
-    z-index: 2;
-    opacity: 1;
-  }
-  .primary-cards__saving-item-2 i:nth-child(2n) {
-    position: relative;
-    right: 36px;
-    z-index: 1;
-    opacity: 0;
-  }
-  .primary-cards__saving-item-2:active {
-    background-image: linear-gradient(0deg, #e66465, #9198e5);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-  }
-  .primary-cards__saving-item-2:active i:nth-child(2n+1) {
-    z-index: 1;
-    opacity: 0;
-  }
-  .primary-cards__saving-item-2:active i:nth-child(2n) {
-    z-index: 2;
-    opacity: 1;
-  }
-}
-.primary-cards__saving-item-3 {
-  display: none;
-}
-@media screen and (min-width: 768px) {
-  .primary-cards__saving-item-3 {
-    display: inline-block;
-    position: absolute;
-    width: fit-content;
-    height: fit-content;
-    left: 39%;
-    top: 845px;
-  }
-  .primary-cards__saving-item-3 i:nth-child(2n+1) {
-    position: relative;
-    z-index: 2;
-    opacity: 1;
-  }
-  .primary-cards__saving-item-3 i:nth-child(2n) {
-    position: relative;
-    right: 36px;
-    z-index: 1;
-    opacity: 0;
-  }
-  .primary-cards__saving-item-3:active {
-    background-image: linear-gradient(0deg, #e66465, #9198e5);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-  }
-  .primary-cards__saving-item-3:active i:nth-child(2n+1) {
-    z-index: 1;
-    opacity: 0;
-  }
-  .primary-cards__saving-item-3:active i:nth-child(2n) {
-    z-index: 2;
-    opacity: 1;
-  }
-}
-.primary-cards__saving-item-4 {
-  display: none;
-}
-@media screen and (min-width: 768px) {
-  .primary-cards__saving-item-4 {
-    display: inline-block;
-    position: absolute;
-    width: fit-content;
-    height: fit-content;
-    left: 85%;
-    top: 845px;
-  }
-  .primary-cards__saving-item-4 i:nth-child(2n+1) {
-    position: relative;
-    z-index: 2;
-    opacity: 1;
-  }
-  .primary-cards__saving-item-4 i:nth-child(2n) {
-    position: relative;
-    right: 36px;
-    z-index: 1;
-    opacity: 0;
-  }
-  .primary-cards__saving-item-4:active {
-    background-image: linear-gradient(0deg, #e66465, #9198e5);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-  }
-  .primary-cards__saving-item-4:active i:nth-child(2n+1) {
-    z-index: 1;
-    opacity: 0;
-  }
-  .primary-cards__saving-item-4:active i:nth-child(2n) {
-    z-index: 2;
-    opacity: 1;
-  }
-}
 .primary-cards__title {
   font-size: 22px;
 }
@@ -497,21 +344,50 @@ i, p {
 .primary-cards__content p {
   margin: 5px 0px 20px 15px;
 }
-.primary-cards__saving-item {
+.primary-cards__saving-item-1 {
   left: 28%;
   bottom: 100px;
 }
 @media screen and (min-width: 768px) {
-  .primary-cards__saving-item {
-    display: none;
+  .primary-cards__saving-item-1 {
+    position: absolute;
+    left: 39%;
+    bottom: 0px;
+    top: 375px;
   }
 }
-.primary-cards__saving-item::after {
-  position: absolute;
+.primary-cards__saving-item-2 {
+  left: 28%;
+  bottom: 100px;
 }
 @media screen and (min-width: 768px) {
-  .primary-cards__saving-item::after {
-    display: none;
+  .primary-cards__saving-item-2 {
+    position: absolute;
+    left: 85%;
+    top: 375px;
+  }
+}
+.primary-cards__saving-item-3 {
+  left: 28%;
+  bottom: 100px;
+}
+@media screen and (min-width: 768px) {
+  .primary-cards__saving-item-3 {
+    position: absolute;
+    left: 39%;
+    bottom: 0px;
+    top: 845px;
+  }
+}
+.primary-cards__saving-item-4 {
+  left: 28%;
+  bottom: 100px;
+}
+@media screen and (min-width: 768px) {
+  .primary-cards__saving-item-4 {
+    position: absolute;
+    left: 85%;
+    top: 845px;
   }
 }
 
