@@ -1,7 +1,3 @@
-.index {
-    animation: index 0s 3s both;
-}
-
 @for $i from 1 through 2 {
     .loading-spinner-#{$i} {
         display: flex;
@@ -24,7 +20,7 @@
                 font-family: "Shrikhand", cursive;
                 color: black;
                 opacity: 0;
-                animation: down 0.7s ease-out forwards;
+                animation: down 0.7s ease-in-out forwards;
             }
     
             &::after {
@@ -51,14 +47,14 @@
                 display: inline-block;
                 position: relative;
                 left: 0px;
-                top: 316px;
+                top: 315px;
                 z-index: 1;
                 box-sizing: content-box;
                 width: 125px;
                 height: 125px;
-                border: 2px solid $background;
-                border-top: 2px solid nth($color, 3);
-                border-radius: 135px;
+                border: 3px solid $background;
+                border-top: 3px solid nth($color, 3);
+                border-radius: 125px;
                 transform-origin: center;
                 transform: rotate(0deg);
                 opacity: 0;
@@ -70,29 +66,19 @@
                 display: inline-block;
                 position: relative;
                 left: 0px;
-                top: 187px;
+                top: 184px;
                 z-index: 2;
                 width: 125px;
                 height: 125px;
-                border: 2px solid $background;
-                border-top: 2px solid nth($color, 2);
-                border-radius: 135px;
+                border: 3px solid $background;
+                border-top: 3px solid nth($color, 2);
+                border-radius: 125px;
                 transform-origin: center;
                 transform: rotate(0deg);
                 opacity: 0;
                 animation: spin 0.5s 2s ease-in-out forwards infinite;
             }  
         }
-    }
-}
-    
-@keyframes index {
-    from {
-        transform: scale(0);
-    }
-
-    to {
-        transform: scale(1);
     }
 }
 
@@ -110,6 +96,7 @@
     0% {
         opacity: 1;
         transform: translateY(0px);
+        animation-timing-function: cubic-bezier(1,0,1,1);
     }
 
     25% {
@@ -149,6 +136,7 @@
 
     75% {
         opacity: 0.5;
+        animation-timing-function: ease-in;
     }
 
     100% {
