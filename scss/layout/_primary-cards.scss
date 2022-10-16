@@ -8,66 +8,6 @@
     @include media(tablet) {
         background-color: white; 
     }
-    @for $i from 1 through 4 {
-        &__saving-item-#{$i} {
-            display: none;
-            @include media (tablet) {
-                display: inline-block;
-                position: absolute;
-                width: fit-content;
-                height: fit-content;
-                @if ($i%2 != 0) {
-                    left: 39%;
-
-                    @if ($i == 1) {
-                        top: 440px - 65px;
-                    }
-                    @else {
-                        top: (2 * 440px) + 30px - 65px;
-                    }
-                }
-                @else {
-                    left: 85%;
-
-                    @if ($i == 2) {
-                        top: 440px - 65px;
-                    }
-                    @else {
-                        top: (2 * 440px) + 30px - 65px;
-                    }
-                }
-                
-                i:nth-child(2n+1) {
-                    position: relative;
-                    z-index: 2;
-                    opacity: 1;
-                }
-
-                i:nth-child(2n) {
-                    position: relative;
-                    right: 36px;
-                    z-index: 1;
-                    opacity: 0;
-                }
-
-                &:active {
-                    background-image: linear-gradient(0deg, #e66465, #9198e5);
-                    -webkit-background-clip: text;
-                    background-clip: text;
-                    color: transparent;
-                    i:nth-child(2n+1) {
-                        z-index: 1;
-                        opacity: 0;
-                    }
-
-                    i:nth-child(2n) {
-                        z-index: 2;
-                        opacity: 1;
-                    }
-                }
-            } 
-        }    
-    }
 
     &__title {
         font-size: $title-size;
@@ -86,7 +26,7 @@
         position: relative;
         @include media(tablet) {
             flex-flow: row wrap;   
-        }
+        }   
     }
 
     &__card {
@@ -135,18 +75,35 @@
             margin: 5px 0px 20px 15px;
         }
     }
-
-    &__saving-item {
-        left: 28%;
-        bottom: 100px;
-        @include media (tablet) {
-            display: none;
-        }
-        &::after {
-            position: absolute;
+      
+    @for $i from 1 through 4 {
+        &__saving-item-#{$i} {
+            left: 28%;
+            bottom: 100px;  
             @include media (tablet) {
-                display: none;
-            }
-        }
-    }    
+                position: absolute;
+                @if ($i%2 != 0) {
+                    left: 39%;
+                    bottom: 0px;
+
+                    @if ($i == 1) {
+                        top: 440px - 65px;
+                    }
+                    @else {
+                        top: (2 * 440px) + 30px - 65px;
+                    }
+                }
+                @else {
+                    left: 85%;
+
+                    @if ($i == 2) {
+                        top: 440px - 65px;
+                    }
+                    @else {
+                        top: (2 * 440px) + 30px - 65px;
+                    }
+                }       
+            } 
+        }    
+    }   
 }     
