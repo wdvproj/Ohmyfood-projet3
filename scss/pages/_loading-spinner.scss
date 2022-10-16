@@ -1,3 +1,5 @@
+@use "../utils/variables" as var;
+
 @for $i from 1 through 2 {
     .loading-spinner-#{$i} {
         display: flex;
@@ -9,7 +11,7 @@
         animation: pause 3s;
         @if $i == 1 {
             z-index: 1;
-            background-color: $background;
+            background-color: var.$background;
             &::before {
                 content: "ohmyfood";
                 display: inline-block;
@@ -34,7 +36,7 @@
                 width: 125px;
                 height: 125px;
                 border-radius: 125px;
-                background-color: nth($color, 4);
+                background-color: nth(var.$color, 4);
                 opacity: 0;
                 animation: show 1s 0.7s ease-out forwards;
             }
@@ -52,8 +54,8 @@
                 box-sizing: content-box;
                 width: 125px;
                 height: 125px;
-                border: 3px solid $background;
-                border-top: 3px solid nth($color, 3);
+                border: 3px solid var.$background;
+                border-top: 3px solid nth(var.$color, 3);
                 border-radius: 125px;
                 transform-origin: center;
                 transform: rotate(0deg);
@@ -70,8 +72,8 @@
                 z-index: 2;
                 width: 125px;
                 height: 125px;
-                border: 3px solid $background;
-                border-top: 3px solid nth($color, 2);
+                border: 3px solid var.$background;
+                border-top: 3px solid nth(var.$color, 2);
                 border-radius: 125px;
                 transform-origin: center;
                 transform: rotate(0deg);

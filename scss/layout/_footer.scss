@@ -1,7 +1,11 @@
+@use "../utils/variables" as var;
+
+@use "../utils/mixins" as mix;
+
 .bottom {
     padding: 2% 0% 0% 6%;
     background-color: #282828;
-    @include media(tablet) {
+    @include mix.media(tablet) {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -9,33 +13,33 @@
         padding-left: 0%;
     }
     &__title {
-        font-size: $title-size - 6px;
+        font-size: var.$title-size - 6px;
         font-family: "Shrikhand", cursive;
         color: white;
-        @include media(tablet) {
+        @include mix.media(tablet) {
             width: fit-content;
-            font-size: $title-size - 4px;
+            font-size: var.$title-size - 4px;
         }
     }
 
     &__information {
         margin-bottom: 6%;
-        @include media(tablet) {
+        @include mix.media(tablet) {
             display: flex;
             justify-content: space-evenly;
         }
         li {
             line-height: 1.5;
-            @include media(tablet) {
+            @include mix.media(tablet) {
                 width: fit-content;
-                font-size: $title-size - 4px;
+                font-size: var.$title-size - 4px;
             }
         }
 
         a {
             display: flex;
             color: white;
-            @include media(tablet) {
+            @include mix.media(tablet) {
                 white-space: nowrap;
             }
         }

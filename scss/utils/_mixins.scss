@@ -1,3 +1,5 @@
+@use "variables" as var;
+
 @mixin inline-layout {
     display: inline-block;
     margin: 3% 1%;
@@ -6,12 +8,12 @@
 @mixin list-block {
     height: 80px;
     margin: 25px 0px;
-    border-radius: $corner-shape - 15px;
-    box-shadow: 1px 1px 10px 1px $secondary-dark-background;
+    border-radius: var.$corner-shape - 15px;
+    box-shadow: 1px 1px 10px 1px var.$secondary-dark-background;
 }
 
 @mixin media($type) {
-    @media screen and (min-width: map-get($breakpoints, $type)){
+    @media screen and (min-width: map-get(var.$breakpoints, $type)){
         @content;
     }
 }

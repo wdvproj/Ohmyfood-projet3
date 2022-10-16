@@ -1,29 +1,24 @@
-/* BASE */
+// BASE
 
-@import "./base/base";
+@use "./base/base";
 
-// UTILS 
 
-@import "./utils/variables";
+// COMPONENTS
 
-@import "./utils/mixins";
+@use "./components/button"; 
 
-/* COMPONENTS */
+@use "./components/saving-item";
 
-@import "./components/button"; 
+// LAYOUT
 
-@import "./components/saving-item";
+@use "./layout/header";
 
-/* LAYOUT */ 
+@use "./layout/footer";
 
-@import "./layout/header";
+// PAGES
 
-@import "./layout/footer";
+@use "./pages/loading-spinner";
 
-/* PAGES */
+@use "./pages/home-page";
 
-@import "./pages/loading-spinner";
-
-@import "./pages/home-page";
-
-@import "./pages/menu";
+@use "./pages/menu";
