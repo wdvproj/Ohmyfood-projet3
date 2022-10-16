@@ -1,42 +1,48 @@
 .saving-item {
     position: relative;
     width: fit-content;
-    height: fit-content;
-    cursor: pointer;
+    height: fit-content;   
     button {
         position: absolute;
-        width: 35px;
-        height: 35px;
-        z-index: 1;
+        z-index: 2;
+        width: 24px;
+        height: 22px;
+        background-image: linear-gradient(0deg, nth($color, 3), nth($color, 2));
+        clip-path: path("M 2 7 A 5 5 0 0 1 12 7 A 5 5 0 0 1 22 7 Q 22 14 12 20 Q 2 14 2 7 Z");
         opacity: 0;
+        cursor: pointer;
+        &:active {
+            animation: fill 0.4s linear forwards;
+            @include media(desktop) {
+                animation: none;
+            }
+            + svg {
+                opacity: 0;
+                @include media(desktop) {
+                    opacity: 1;
+                }
+            }
+        }
+    
+        &:hover {
+            @include media(desktop) {
+                animation: fill 0.6s linear forwards;
+            }
+            + svg {
+                @include media(desktop) {
+                    opacity: 0;
+                }
+            }
+        }
     }
 
     svg {
         position: absolute;
-        width: 35px;
-        height: 35px;
-        z-index: 3;
-    }
-
-    &:active svg {
-        display: none;
-        z-index: 2;
-    }
-
-    &::after {
-        content: "";
-        display: inline-block;
-        width: 35px;
-        height: 35px;
-        background-image: linear-gradient(0deg, #e66465, #9198e5);
-        clip-path: path("M 10 10 A 5 5 0 0 1 20 10 A 5 5 0 0 1 30 10 Q 32 16 20 25 Q 10 18 10 10 Z");
-        opacity: 0;
-        z-index: 2;
-    }
-
-    &:active::after {
-        z-index: 3;
-        animation: fill 0.4s both;
+        z-index: 1;
+        width: 24px;
+        height: 22px;
+        opacity: 1;
+        cursor: pointer;
     }
 }
 
@@ -46,11 +52,12 @@
     }
   
     25% {
-        opacity: 0.1;
+        opacity: 0.2;
     }
   
     75% {
-        opacity: 0.4;
+        opacity: 0.5;
+        animation-timing-function: ease-out;
     }
   
     100% {

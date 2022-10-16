@@ -13,8 +13,8 @@
     color: white;
     white-space: nowrap;
     &:hover { 
-        opacity: 0.75;
         box-shadow: 2px 2px 5px 2px darken($secondary-dark-background, 10%);
+        opacity: 0.75;
     }
 
     &--padding {
