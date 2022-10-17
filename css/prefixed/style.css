@@ -85,55 +85,48 @@ i, p {
   height: -moz-fit-content;
   height: fit-content;
 }
-.saving-item button {
-  position: absolute;
+.saving-item > div:nth-child(2n+1) {
+  position: relative;
   z-index: 2;
-  width: 24px;
-  height: 22px;
-  background-image: -webkit-gradient(linear, left bottom, left top, from(#FF79DA), to(#9356DC));
-  background-image: -o-linear-gradient(bottom, #FF79DA, #9356DC);
-  background-image: linear-gradient(0deg, #FF79DA, #9356DC);
-  -webkit-clip-path: path("M 2 7 A 5 5 0 0 1 12 7 A 5 5 0 0 1 22 7 Q 22 14 12 20 Q 2 14 2 7 Z");
-          clip-path: path("M 2 7 A 5 5 0 0 1 12 7 A 5 5 0 0 1 22 7 Q 22 14 12 20 Q 2 14 2 7 Z");
-  opacity: 0;
+  opacity: 1;
   cursor: pointer;
 }
-.saving-item button:active {
+.saving-item > div:nth-child(2n+1):active {
+  opacity: 0;
+}
+.saving-item > div:nth-child(2n+1):active + div {
   -webkit-animation: fill 0.4s linear forwards;
           animation: fill 0.4s linear forwards;
 }
 @media screen and (min-width: 992px) {
-  .saving-item button:active {
+  .saving-item > div:nth-child(2n+1):active {
+    opacity: 1;
+  }
+  .saving-item > div:nth-child(2n+1):active + div {
     -webkit-animation: none;
             animation: none;
   }
 }
-.saving-item button:active + svg {
-  opacity: 0;
-}
 @media screen and (min-width: 992px) {
-  .saving-item button:active + svg {
-    opacity: 1;
-  }
-}
-@media screen and (min-width: 992px) {
-  .saving-item button:hover {
-    -webkit-animation: fill 0.6s linear forwards;
-            animation: fill 0.6s linear forwards;
-  }
-}
-@media screen and (min-width: 992px) {
-  .saving-item button:hover + svg {
+  .saving-item > div:nth-child(2n+1):hover {
     opacity: 0;
   }
+  .saving-item > div:nth-child(2n+1):hover + div {
+    -webkit-animation: fill 0.4s linear forwards;
+            animation: fill 0.4s linear forwards;
+  }
 }
-.saving-item svg {
+.saving-item > div:nth-child(2n) {
   position: absolute;
+  top: 0px;
   z-index: 1;
-  width: 24px;
-  height: 22px;
-  opacity: 1;
-  cursor: pointer;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#FF79DA), to(#9356DC));
+  background-image: -o-linear-gradient(bottom, #FF79DA, #9356DC);
+  background-image: linear-gradient(0deg, #FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  opacity: 0;
 }
 
 @-webkit-keyframes fill {
@@ -1021,17 +1014,6 @@ i, p {
   width: -moz-fit-content;
   width: fit-content;
 }
-.top__link button {
-  position: relative;
-  top: 5px;
-  z-index: 1;
-  opacity: 0;
-}
-.top__link i {
-  position: relative;
-  bottom: 8px;
-  z-index: 2;
-}
 
 .secondary-cards {
   background-color: #F4F4F4;
@@ -1311,6 +1293,36 @@ i, p {
             transform: translate(0px, -10px);
   }
 }
+.secondary-cards__card li i {
+  position: absolute;
+  right: 0px;
+  z-index: 1;
+  color: white;
+  -webkit-transform: translateX(20px) rotate(0turn);
+      -ms-transform: translateX(20px) rotate(0turn);
+          transform: translateX(20px) rotate(0turn);
+  -webkit-transition: -webkit-transform 350ms;
+  transition: -webkit-transform 350ms;
+  -o-transition: transform 350ms;
+  transition: transform 350ms;
+  transition: transform 350ms, -webkit-transform 350ms;
+}
+@media screen and (min-width: 768px) {
+  .secondary-cards__card li i {
+    position: absolute;
+    right: 47%;
+    bottom: 0px;
+    margin-bottom: 10px;
+    -webkit-transform: translateY(35px) rotate(0turn);
+        -ms-transform: translateY(35px) rotate(0turn);
+            transform: translateY(35px) rotate(0turn);
+    -webkit-transition: -webkit-transform 350ms;
+    transition: -webkit-transform 350ms;
+    -o-transition: transform 350ms;
+    transition: transform 350ms;
+    transition: transform 350ms, -webkit-transform 350ms;
+  }
+}
 .secondary-cards__card li:active i {
   -webkit-transform: translateX(-28px) rotate(1turn);
       -ms-transform: translateX(-28px) rotate(1turn);
@@ -1426,36 +1438,6 @@ i, p {
     -webkit-transform: translate(0px, 0px);
         -ms-transform: translate(0px, 0px);
             transform: translate(0px, 0px);
-  }
-}
-.secondary-cards i {
-  position: absolute;
-  right: 0px;
-  z-index: 1;
-  color: white;
-  -webkit-transform: translateX(20px) rotate(0turn);
-      -ms-transform: translateX(20px) rotate(0turn);
-          transform: translateX(20px) rotate(0turn);
-  -webkit-transition: -webkit-transform 350ms;
-  transition: -webkit-transform 350ms;
-  -o-transition: transform 350ms;
-  transition: transform 350ms;
-  transition: transform 350ms, -webkit-transform 350ms;
-}
-@media screen and (min-width: 768px) {
-  .secondary-cards i {
-    position: absolute;
-    right: 47%;
-    bottom: 0px;
-    margin-bottom: 10px;
-    -webkit-transform: translateY(35px) rotate(0turn);
-        -ms-transform: translateY(35px) rotate(0turn);
-            transform: translateY(35px) rotate(0turn);
-    -webkit-transition: -webkit-transform 350ms;
-    transition: -webkit-transform 350ms;
-    -o-transition: transform 350ms;
-    transition: transform 350ms;
-    transition: transform 350ms, -webkit-transform 350ms;
   }
 }
 
