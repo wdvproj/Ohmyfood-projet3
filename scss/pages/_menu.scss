@@ -102,13 +102,6 @@
             align-items: center;
             padding: 2%;
         }
-        span {
-            border-bottom: medium solid nth(var.$color, 4);
-            @include mix.media(tablet) {
-                border-bottom: none;
-            }
-        }
-
         li {
             display: flex;
             justify-content: space-between;
@@ -216,10 +209,10 @@
             border-bottom: medium solid nth(var.$color, 4);
             text-align: center;
         }
-        &--padding {
-            padding-left: 10%;
+        span {
+            border-bottom: medium solid nth(var.$color, 4);
             @include mix.media(tablet) {
-                padding-left: 0px;
+                border-bottom: none;
             }
         }
     }
