@@ -772,14 +772,6 @@ i, p {
     padding: 2%;
   }
 }
-.secondary-cards__card span {
-  border-bottom: medium solid #99E2D0;
-}
-@media screen and (min-width: 768px) {
-  .secondary-cards__card span {
-    border-bottom: none;
-  }
-}
 .secondary-cards__card li {
   display: flex;
   justify-content: space-between;
@@ -900,12 +892,12 @@ i, p {
     text-align: center;
   }
 }
-.secondary-cards__topic--padding {
-  padding-left: 10%;
+.secondary-cards__topic span {
+  border-bottom: medium solid #99E2D0;
 }
 @media screen and (min-width: 768px) {
-  .secondary-cards__topic--padding {
-    padding-left: 0px;
+  .secondary-cards__topic span {
+    border-bottom: none;
   }
 }
 .secondary-cards__subtitle {
