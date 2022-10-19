@@ -173,7 +173,7 @@
     }
 
     &__card {
-        height: 440px;
+        height: 320px;
         margin-bottom: 30px;
         border-radius: 20px;
         background-color: white;
@@ -190,7 +190,7 @@
         height: 70%;
         img {
             object-fit: cover;
-            height: 350px;
+            height: 225px;
             border-radius: 20px 20px 0px 0px;
         }
 
@@ -233,20 +233,20 @@
                         left: 39%;
     
                         @if ($i == 1) {
-                            top: 440px - 65px;
+                            top: 320px - 65px;
                         }
                         @else {
-                            top: (2 * 440px) + 30px - 65px;
+                            top: (2 * 320px) + 30px - 65px;
                         }
                     }
                     @else {
                         left: 85%;
     
                         @if ($i == 2) {
-                            top: 440px - 65px;
+                            top: 320px - 65px;
                         }
                         @else {
-                            top: (2 * 440px) + 30px - 65px;
+                            top: (2 * 320px) + 30px - 65px;
                         }
                     }
     
