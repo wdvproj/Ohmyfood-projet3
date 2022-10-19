@@ -91,30 +91,12 @@ i, p {
   opacity: 1;
   cursor: pointer;
 }
-.saving-item > div:nth-child(2n+1):active {
+.saving-item > div:nth-child(2n+1):hover {
   opacity: 0;
 }
-.saving-item > div:nth-child(2n+1):active + div {
+.saving-item > div:nth-child(2n+1):hover + div {
   -webkit-animation: fill 0.4s linear forwards;
           animation: fill 0.4s linear forwards;
-}
-@media screen and (min-width: 992px) {
-  .saving-item > div:nth-child(2n+1):active {
-    opacity: 1;
-  }
-  .saving-item > div:nth-child(2n+1):active + div {
-    -webkit-animation: none;
-            animation: none;
-  }
-}
-@media screen and (min-width: 992px) {
-  .saving-item > div:nth-child(2n+1):hover {
-    opacity: 0;
-  }
-  .saving-item > div:nth-child(2n+1):hover + div {
-    -webkit-animation: fill 0.4s linear forwards;
-            animation: fill 0.4s linear forwards;
-  }
 }
 .saving-item > div:nth-child(2n) {
   position: absolute;
@@ -1233,60 +1215,32 @@ i, p {
     transition: transform 350ms, -webkit-transform 350ms;
   }
 }
-.secondary-cards__card li:active::after {
+.secondary-cards__card li:hover::after {
   -webkit-transform: translateX(0px);
       -ms-transform: translateX(0px);
           transform: translateX(0px);
 }
 @media screen and (min-width: 768px) {
-  .secondary-cards__card li:active::after {
-    -webkit-transform: translate(0px, 0px);
-        -ms-transform: translate(0px, 0px);
-            transform: translate(0px, 0px);
-  }
-}
-@media screen and (min-width: 992px) {
-  .secondary-cards__card li:active::after {
-    -webkit-transform: translate(0px, 40px);
-        -ms-transform: translate(0px, 40px);
-            transform: translate(0px, 40px);
-  }
-}
-@media screen and (min-width: 992px) {
   .secondary-cards__card li:hover::after {
     -webkit-transform: translate(0px, 0px);
         -ms-transform: translate(0px, 0px);
             transform: translate(0px, 0px);
   }
 }
-.secondary-cards__card li:active div {
+.secondary-cards__card li:hover div {
   width: 53%;
 }
 @media screen and (min-width: 768px) {
-  .secondary-cards__card li:active div {
+  .secondary-cards__card li:hover div {
     width: auto;
   }
 }
-.secondary-cards__card li:active > p {
+.secondary-cards__card li:hover > p {
   -webkit-transform: translateX(-100px);
       -ms-transform: translateX(-100px);
           transform: translateX(-100px);
 }
 @media screen and (min-width: 768px) {
-  .secondary-cards__card li:active > p {
-    -webkit-transform: translate(0px, -10px);
-        -ms-transform: translate(0px, -10px);
-            transform: translate(0px, -10px);
-  }
-}
-@media screen and (min-width: 992px) {
-  .secondary-cards__card li:active > p {
-    -webkit-transform: translate(0px, 0px);
-        -ms-transform: translate(0px, 0px);
-            transform: translate(0px, 0px);
-  }
-}
-@media screen and (min-width: 992px) {
   .secondary-cards__card li:hover > p {
     -webkit-transform: translate(0px, -10px);
         -ms-transform: translate(0px, -10px);
@@ -1323,26 +1277,12 @@ i, p {
     transition: transform 350ms, -webkit-transform 350ms;
   }
 }
-.secondary-cards__card li:active i {
+.secondary-cards__card li:hover i {
   -webkit-transform: translateX(-28px) rotate(1turn);
       -ms-transform: translateX(-28px) rotate(1turn);
           transform: translateX(-28px) rotate(1turn);
 }
 @media screen and (min-width: 768px) {
-  .secondary-cards__card li:active i {
-    -webkit-transform: translateY(0px) rotate(1turn);
-        -ms-transform: translateY(0px) rotate(1turn);
-            transform: translateY(0px) rotate(1turn);
-  }
-}
-@media screen and (min-width: 992px) {
-  .secondary-cards__card li:active i {
-    -webkit-transform: translateY(35px) rotate(0turn);
-        -ms-transform: translateY(35px) rotate(0turn);
-            transform: translateY(35px) rotate(0turn);
-  }
-}
-@media screen and (min-width: 992px) {
   .secondary-cards__card li:hover i {
     -webkit-transform: translateY(0px) rotate(1turn);
         -ms-transform: translateY(0px) rotate(1turn);

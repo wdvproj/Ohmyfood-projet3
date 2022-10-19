@@ -129,46 +129,26 @@
                 }
             }
 
-            &:active::after {
+            &:hover::after {
                 transform: translateX(0px);
                 @include mix.media(tablet) {   
                     transform: translate(0px, 0px);
                 } 
-
-                @include mix.media(desktop) {   
-                    transform:  translate(0px, 40px);
-                } 
             }
 
-            &:hover::after {
-                @include mix.media(desktop) {   
-                    transform: translate(0px, 0px);
-                } 
-            }
-
-            &:active div {
+            &:hover div {
                 width: 53%;
                 @include mix.media(tablet) {
                     width: auto;
                 }
             }
 
-            &:active > p {
+            &:hover > p {
                 transform: translateX(-100px);
                 @include mix.media(tablet) {
                     transform: translate(0px, -10px);
                 }
-
-                @include mix.media(desktop) {
-                    transform: translate(0px, 0px);
-                }
             } 
-
-            &:hover > p {
-                @include mix.media(desktop) {   
-                    transform: translate(0px, -10px);
-                } 
-            }
 
             i {
                 position: absolute;
@@ -187,19 +167,9 @@
                 }
             }
 
-            &:active i {
+            &:hover i {
                 transform: translateX(-28px) rotate(1turn);
                 @include mix.media(tablet) {   
-                    transform: translateY(0px) rotate(1turn);
-                } 
-
-                @include mix.media(desktop) {   
-                    transform: translateY(35px) rotate(0turn);
-                } 
-            }
-
-            &:hover i {
-                @include mix.media(desktop) {   
                     transform: translateY(0px) rotate(1turn);
                 } 
             }
